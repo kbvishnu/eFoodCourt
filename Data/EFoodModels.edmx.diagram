@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e33807fc10ca4d32902c8bd5657e9d46" Name="Diagram1" ZoomLevel="99">
+        <EntityTypeShape EntityType="E_FoodCourtModel.AdminUser" Width="1.5" PointX="13" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.Cuisine" Width="1.5" PointX="1.5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.EWallet" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.EWalletLoadingHistory" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.EWalletTransaction" Width="1.5" PointX="6" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.FoodCategory" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.Menu" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.MenuItem" Width="1.5" PointX="8.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.Offer" Width="1.5" PointX="3.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.OrderType" Width="1.5" PointX="3.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.ProessingStatu" Width="1.5" PointX="3.75" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.RegisteredUser" Width="1.5" PointX="0.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.Restaurant" Width="1.5" PointX="1.5" PointY="39.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.RestaurantLocation" Width="1.5" PointX="1.5" PointY="32.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.ResturantFacility" Width="1.5" PointX="6.75" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.ResturantFacilityMaster" Width="1.5" PointX="4.5" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.ResturantTable" Width="1.5" PointX="8.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.SeatReservation" Width="1.5" PointX="8.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.SeatReservationDetail" Width="1.5" PointX="10.5" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.UserLocation" Width="1.5" PointX="3" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.UserOrder" Width="1.5" PointX="6" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.UserOrderDetail" Width="1.5" PointX="8.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.UserReview" Width="1.5" PointX="3" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="E_FoodCourtModel.UserType" Width="1.5" PointX="10.75" PointY="1.75" IsExpanded="true" />
+        <AssociationConnector Association="E_FoodCourtModel.AdminUsr_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.CusId_MnuItem" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.CusId_Offr" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.UsrId_EWLT" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.UsrId_EWLTLH" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.OrdId_EWLTT" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.ResLocId_EWLTT" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.UsrId_EWLTT" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.FCatId_MnuItem" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.MenuId_MnuItm" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.MenuId_UsrOrdDet" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.OfrId_UsrOrd" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.ResLocId_Offr" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.OrdrTpId_UsrOrd" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.PrsStsId_UsrOrdDet" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.StsId_Res" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.StsId_UsrOrd" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.UserId_UsrLoc" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.UserId_UsrOrd" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.UsrId_Res" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.UsrId_UsrRew" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.ResId_ResLoc" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.ResLoc_ResFac" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.ResTable_Loc" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.ResFac_ResFac" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.SeatResDtl_TblId" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.OrdrId_Res" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.SeatResDtl_ResID" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.OrdrId_UsrOrdDet" ManuallyRouted="false" />
+        <AssociationConnector Association="E_FoodCourtModel.menu_resLoc" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

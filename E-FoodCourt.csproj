@@ -1,0 +1,634 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\EFoodCourt\EFoodCourt\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\EFoodCourt\EFoodCourt\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\..\EFoodCourt\EFoodCourt\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\EFoodCourt\EFoodCourt\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FB25C1D6-3FA3-4342-850C-95AF435787CB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>E_FoodCourt</RootNamespace>
+    <AssemblyName>E-FoodCourt</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\EFoodCourt\EFoodCourt\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\EFoodCourt\EFoodCourt\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\EFoodCourt\EFoodCourt\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\EFoodCourt\EFoodCourt\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\EFoodCourt\EFoodCourt\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\EFoodCourt\EFoodCourt\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\EFoodCourt\EFoodCourt\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\EFoodCourt\EFoodCourt\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\EFoodCourt\EFoodCourt\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\EFoodCourt\EFoodCourt\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminLogin.aspx" />
+    <Content Include="AdminSignIn.aspx" />
+    <Content Include="Admin\AdminUsers.aspx" />
+    <Content Include="Admin\Home.aspx" />
+    <Content Include="Admin\Reviews.aspx" />
+    <Content Include="css\hero-slider.css" />
+    <Content Include="css\owl-carousel.css" />
+    <Content Include="css\templatemo-style.css" />
+    <Content Include="Data\EFoodModels.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EFoodModels.edmx</DependentUpon>
+      <LastGenOutput>EFoodModels.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\EFoodModels.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EFoodModels.edmx</DependentUpon>
+      <LastGenOutput>EFoodModels.cs</LastGenOutput>
+    </Content>
+    <Content Include="img\grid-alt.png" />
+    <Content Include="img\grid-header.png" />
+    <Content Include="img\grid-pgr.png" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Admin\Admin.Master" />
+    <Content Include="Restaurant\LocationDtl.aspx" />
+    <Content Include="Restaurant\Locations.aspx" />
+    <Content Include="Restaurant\MenuItemDtl.aspx" />
+    <Content Include="Restaurant\MenuList.aspx" />
+    <Content Include="Restaurant\Restuarnt.Master" />
+    <Content Include="Restaurant\ResturantDetail.aspx" />
+    <Content Include="Restaurant\TableDtl.aspx" />
+    <Content Include="Search.aspx" />
+    <Content Include="SignIn.aspx" />
+    <Content Include="SignUp.aspx" />
+    <Content Include="User\Address.aspx" />
+    <Content Include="User\AddressDtl.aspx" />
+    <Content Include="User\EWallet.aspx" />
+    <Content Include="User\Home.aspx" />
+    <Content Include="User\Order.aspx" />
+    <Content Include="User\OrderSummary.aspx" />
+    <Content Include="User\OrderList.aspx" />
+    <Content Include="User\ReserveSeat.aspx" />
+    <Content Include="User\User.Master" />
+    <Content Include="General.Master" />
+    <Content Include="css\bootstrap-theme.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\fonts\flexslider-icon.eot" />
+    <Content Include="css\fonts\flexslider-icon.ttf" />
+    <Content Include="css\fonts\flexslider-icon.woff" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <EntityDeploy Include="Data\EFoodModels.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EFoodModels.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Data\EFoodModels.edmx.diagram">
+      <DependentUpon>EFoodModels.edmx</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Resturants.aspx" />
+    <Content Include="Admin\FoodCategory.aspx" />
+    <Content Include="blog.html" />
+    <Content Include="contact.html" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\fontAwesome.css" />
+    <Content Include="css\fonts\flexslider-icon.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Index.aspx" />
+    <Content Include="img\banner-bg.jpg" />
+    <Content Include="img\blog_item_01.jpg" />
+    <Content Include="img\blog_item_02.jpg" />
+    <Content Include="img\blog_item_03.jpg" />
+    <Content Include="img\blog_item_04.jpg" />
+    <Content Include="img\blog_post_01.jpg" />
+    <Content Include="img\blog_post_02.jpg" />
+    <Content Include="img\blog_post_03.jpg" />
+    <Content Include="img\blog_post_04.jpg" />
+    <Content Include="img\book-bg.jpg" />
+    <Content Include="img\book_left_image.jpg" />
+    <Content Include="img\breakfast_item.jpg" />
+    <Content Include="img\breakfast_menu.jpg" />
+    <Content Include="img\close.png" />
+    <Content Include="img\cook_01.jpg" />
+    <Content Include="img\cook_02.jpg" />
+    <Content Include="img\cook_breakfast.png" />
+    <Content Include="img\cook_dessert.png" />
+    <Content Include="img\cook_dinner.png" />
+    <Content Include="img\cook_lunch.png" />
+    <Content Include="img\dinner_item.jpg" />
+    <Content Include="img\dinner_menu.jpg" />
+    <Content Include="img\heading-bg.jpg" />
+    <Content Include="img\loading.gif" />
+    <Content Include="img\lunch_item.jpg" />
+    <Content Include="img\lunch_menu.jpg" />
+    <Content Include="img\next.png" />
+    <Content Include="img\prev.png" />
+    <Content Include="img\signup-bg.jpg" />
+    <Content Include="index1.html" />
+    <Content Include="js\main.js" />
+    <Content Include="js\plugins.js" />
+    <Content Include="js\vendor\bootstrap.js" />
+    <Content Include="js\vendor\bootstrap.min.js" />
+    <Content Include="js\vendor\jquery-1.11.2.min.js" />
+    <Content Include="js\vendor\modernizr-2.8.3-respond-1.4.2.min.js" />
+    <Content Include="js\vendor\npm.js" />
+    <Content Include="menu.html" />
+    <Content Include="Restaurant\MenuDtl.aspx" />
+    <Content Include="Restaurant\OrderDetails.aspx" />
+    <Content Include="Restaurant\Register.aspx" />
+    <Content Include="Restaurant\TableReservations.aspx" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="User\Profile.aspx" />
+    <Content Include="User\Search.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSignIn.aspx.cs">
+      <DependentUpon>AdminSignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSignIn.aspx.designer.cs">
+      <DependentUpon>AdminSignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Resturants.aspx.cs">
+      <DependentUpon>Resturants.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Resturants.aspx.designer.cs">
+      <DependentUpon>Resturants.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminUsers.aspx.cs">
+      <DependentUpon>AdminUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminUsers.aspx.designer.cs">
+      <DependentUpon>AdminUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FoodCategory.aspx.cs">
+      <DependentUpon>FoodCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FoodCategory.aspx.designer.cs">
+      <DependentUpon>FoodCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Reviews.aspx.cs">
+      <DependentUpon>Reviews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Reviews.aspx.designer.cs">
+      <DependentUpon>Reviews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bussiness\AdminManagement.cs" />
+    <Compile Include="Bussiness\CusineManagement.cs" />
+    <Compile Include="Bussiness\MenuManagement.cs" />
+    <Compile Include="Bussiness\OfferManagement.cs" />
+    <Compile Include="Bussiness\OrderManagement.cs" />
+    <Compile Include="Bussiness\ReservationManagement.cs" />
+    <Compile Include="Bussiness\ResturantManagement.cs" />
+    <Compile Include="Bussiness\UserManagement.cs" />
+    <Compile Include="Data\AdminUser.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Cuisine.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EFoodModels.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFoodModels.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EFoodModels.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EFoodModels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFoodModels.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EWallet.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EWalletLoadingHistory.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\EWalletTransaction.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\FoodCategory.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Menu.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MenuItem.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Offer.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\OrderType.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ProessingStatu.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RegisteredUser.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Restaurant.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\RestaurantLocation.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ResturantFacility.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ResturantFacilityMaster.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ResturantTable.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SeatReservation.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SeatReservationDetail.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SQLConnector.cs" />
+    <Compile Include="Data\DataStore.cs" />
+    <Compile Include="Data\UserLocation.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserOrder.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserOrderDetail.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserReview.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\UserType.cs">
+      <DependentUpon>EFoodModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="General.Master.cs">
+      <DependentUpon>General.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General.Master.designer.cs">
+      <DependentUpon>General.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Restaurant\LocationDtl.aspx.cs">
+      <DependentUpon>LocationDtl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\LocationDtl.aspx.designer.cs">
+      <DependentUpon>LocationDtl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\Locations.aspx.cs">
+      <DependentUpon>Locations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\Locations.aspx.designer.cs">
+      <DependentUpon>Locations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\MenuDtl.aspx.cs">
+      <DependentUpon>MenuDtl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\MenuDtl.aspx.designer.cs">
+      <DependentUpon>MenuDtl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\MenuItemDtl.aspx.cs">
+      <DependentUpon>MenuItemDtl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\MenuItemDtl.aspx.designer.cs">
+      <DependentUpon>MenuItemDtl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\MenuList.aspx.cs">
+      <DependentUpon>MenuList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\MenuList.aspx.designer.cs">
+      <DependentUpon>MenuList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\OrderDetails.aspx.cs">
+      <DependentUpon>OrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\OrderDetails.aspx.designer.cs">
+      <DependentUpon>OrderDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\Restuarnt.Master.cs">
+      <DependentUpon>Restuarnt.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\Restuarnt.Master.designer.cs">
+      <DependentUpon>Restuarnt.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\ResturantDetail.aspx.cs">
+      <DependentUpon>ResturantDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\ResturantDetail.aspx.designer.cs">
+      <DependentUpon>ResturantDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\TableDtl.aspx.cs">
+      <DependentUpon>TableDtl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\TableDtl.aspx.designer.cs">
+      <DependentUpon>TableDtl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurant\TableReservations.aspx.cs">
+      <DependentUpon>TableReservations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Restaurant\TableReservations.aspx.designer.cs">
+      <DependentUpon>TableReservations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Session\SessionManager.cs" />
+    <Compile Include="SignIn.aspx.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignIn.aspx.designer.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Address.aspx.cs">
+      <DependentUpon>Address.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Address.aspx.designer.cs">
+      <DependentUpon>Address.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\AddressDtl.aspx.cs">
+      <DependentUpon>AddressDtl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\AddressDtl.aspx.designer.cs">
+      <DependentUpon>AddressDtl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\EWallet.aspx.cs">
+      <DependentUpon>EWallet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\EWallet.aspx.designer.cs">
+      <DependentUpon>EWallet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\OrderSummary.aspx.cs">
+      <DependentUpon>OrderSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\OrderSummary.aspx.designer.cs">
+      <DependentUpon>OrderSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\OrderList.aspx.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\OrderList.aspx.designer.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ReserveSeat.aspx.cs">
+      <DependentUpon>ReserveSeat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ReserveSeat.aspx.designer.cs">
+      <DependentUpon>ReserveSeat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SQL\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54581</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8081/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\EFoodCourt\EFoodCourt\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\EFoodCourt\EFoodCourt\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\..\EFoodCourt\EFoodCourt\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\EFoodCourt\EFoodCourt\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

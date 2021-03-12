@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="E_FoodCourt.User.User" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+        <title>E-Food Court</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="apple-touch-icon" href="~/apple-touch-icon.png" />
+
+        <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" href="~/css/fontAwesome.css" />
+        <link rel="stylesheet" href="~/css/hero-slider.css" />
+        <link rel="stylesheet" href="~/css/owl-carousel.css" />
+        <link rel="stylesheet" href="~/css/templatemo-style.css" />
+
+        <link href="https://fonts.googleapis.com/css?family=Spectral:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
+
+        <script src="~/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+       
+    </asp:ContentPlaceHolder>
+</head>
+<body>   
+     
+    <form id="form1" runat="server">
+        <div class="header">
+        <div class="container">
+            <a href="#" class="navbar-brand scroll-top">E-Food Court</a>
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!--/.navbar-header-->
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../User/Home.aspx">Home</a></li>
+                        <li><a href="../User/Profile.aspx">Profile</a></li>
+                        <li><a href="../User/search.aspx">Search</a></li>
+                        <li><a href="../User/EWallet.aspx">E Wallet</a></li>
+                        <li><a href="../User/signin.aspx">Cart</a></li>
+                        <li><a href="../User/Order.aspx">Orders</a></li>
+                        <li><a href="../User/ReserveSeat.aspx">Reserve Seat</a></li>
+                        <li><asp:LinkButton Id="lbtnLogOut" runat="server" Onclick="lbtnLogOut_Click">Log out</asp:LinkButton></li>
+                    </ul>
+                </div>
+                <!--/.navbar-collapse-->
+                
+            </nav>
+            <!--/.navbar-->
+        </div>
+        <!--/.container-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-right" style="display:none">
+                        <% =E_FoodCourt.Session.SessionManager.CurrentUserEmailId %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+           
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
